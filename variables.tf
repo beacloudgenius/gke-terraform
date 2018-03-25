@@ -16,6 +16,7 @@ variable "linux_admin_password" {
 variable "gcp_cluster_count" {
   type = "string"
   description = "Count of cluster instances to start."
+  default = 1
 }
 
 variable "cluster_name" {
