@@ -22,7 +22,7 @@ resource "google_container_cluster" "cluster" {
 
   network_policy {
     provider = "CALICO"
-    enabled = true
+    enabled = false
   }
 
   additional_zones = []
