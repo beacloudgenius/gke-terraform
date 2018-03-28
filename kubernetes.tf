@@ -6,8 +6,7 @@ resource "google_container_cluster" "cluster" {
   zone                = "us-west1-a"
   network             = "cloudgenius"
   subnetwork          = "cg"
-  min_master_version  = "1.9.4-gke.1"
-  node_version        = "1.9.4-gke.1"
+  min_master_version  = "1.9.6-gke.0"
 
 ##  remove_default_node_pool = true
 
