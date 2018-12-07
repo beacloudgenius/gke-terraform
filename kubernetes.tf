@@ -6,14 +6,14 @@ resource "google_container_cluster" "cluster" {
   zone                = "us-west1-a"
   network             = "cloudgenius"
   subnetwork          = "cg"
-  min_master_version  = "1.9.6-gke.0"
+  min_master_version  = "1.11.4-gke.8"
 
 ##  remove_default_node_pool = true
 
   master_authorized_networks_config = {
       cidr_blocks = [
         {
-          cidr_block = "73.59.110.24/32",
+          cidr_block = "73.59.108.163/32",
           display_name = "Home"
         }
       ]
@@ -21,7 +21,7 @@ resource "google_container_cluster" "cluster" {
 
   network_policy {
     provider = "CALICO"
-    enabled = false
+    enabled = true
   }
 
   additional_zones = []

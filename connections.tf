@@ -2,8 +2,8 @@
 
 provider "google" {
 
-  version = "~> 1.8"
-  
+  version = "~> 1.19.1"
+
   credentials = "${file("~/.creds/lvnilesh-cloudgeniuslabs-123.json")}"
   project     = "cloudgeniuslabs-123"
   region      = "us-west1"
