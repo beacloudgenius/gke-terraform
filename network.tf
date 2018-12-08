@@ -7,7 +7,7 @@ resource "google_compute_subnetwork" "cg" {
   name   = "cg"
   network = "cloudgenius"
   ip_cidr_range = "10.64.0.0/19"
-  region = "us-west1"
+  region = "${var.region}"
 
   secondary_ip_range  = {
     range_name = "cg-pods"

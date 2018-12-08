@@ -6,5 +6,5 @@ provider "google" {
 
   credentials = "${file("~/.creds/lvnilesh-cloudgeniuslabs-123.json")}"
   project     = "cloudgeniuslabs-123"
-  region      = "us-west1"
+  region      = "${var.region}"
 }

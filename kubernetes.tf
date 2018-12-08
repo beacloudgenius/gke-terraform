@@ -1,12 +1,12 @@
-# terraform import google_container_cluster.cluster us-west1-a/andromeda
+# terraform import google_container_cluster.cluster us-central1-a/andromeda
 
 resource "google_container_cluster" "cluster" {
 
   name                = "${var.cluster_name}"
-  zone                = "us-west1-a"
+  zone                = "${var.zone}"
   network             = "cloudgenius"
   subnetwork          = "cg"
-  min_master_version  = "1.11.4-gke.8"
+  min_master_version  = "${var.min_master_version}"
 
 ##  remove_default_node_pool = true
 
