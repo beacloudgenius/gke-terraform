@@ -23,14 +23,14 @@ variable "gcp_cluster_count" {
 variable "region" {
   type = "string"
   description = "region."
-  default = "us-central1"
+  default = "us-west1"
 }
 
 // GCP Variables
 variable "zone" {
   type = "string"
   description = "zone."
-  default = "us-central1-a"
+  default = "us-west1-a"
 }
 
 variable "cluster_name" {
@@ -68,7 +68,7 @@ variable "cluster_min_nodes" {
 variable "min_master_version" {
   type = "string"
   description = "version of Kubernetes"
-  default = "1.11.3-gke.18"
+  default = "1.11.6-gke.6"
 }
 
 variable "cluster_max_nodes" {
