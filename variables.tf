@@ -1,17 +1,5 @@
 // General Variables
 
-variable "linux_admin_username" {
-  type        = "string"
-  description = "User name for authentication to the Kubernetes linux agent virtual machines in the cluster."
-  default = "cloudgenius"
-}
-
-variable "linux_admin_password" {
-  type ="string"
-  description = "The password for the Linux admin account."
-  default = "ilikerandompasswords"
-}
-
 // GCP Variables
 variable "gcp_cluster_count" {
   type = "string"
@@ -39,7 +27,6 @@ variable "cluster_name" {
   default = "andromeda"
 }
 
-
 variable "cluster_machine_type" {
   type = "string"
   description = "Machine type"
@@ -58,7 +45,6 @@ variable "cluster_disk_size_gb" {
   default = "99"
 }
 
-
 variable "cluster_min_nodes" {
   type = "string"
   description = "min"
@@ -76,7 +62,6 @@ variable "cluster_max_nodes" {
   description = "max"
   default = "11"
 }
-
 
 variable "cluster_oauth_scopes" {
   type = "list"

@@ -49,6 +49,9 @@ resource "google_container_cluster" "cluster" {
         service_account = "default"
         oauth_scopes = "${var.cluster_oauth_scopes}"
         metadata {
+          "disable-legacy-endpoints" = "true"
+        }
+        metadata {
           foo = "bar"
         }
         labels {

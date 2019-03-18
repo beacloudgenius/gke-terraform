@@ -4,7 +4,7 @@ provider "google" {
 
   version = "~> 2.2.0"
 
-  credentials = "${file("~/.creds/oceanic-isotope-233522-b030dceb4b1a.json")}"
+  credentials = "${file("~/creds/oceanic-isotope-233522-b030dceb4b1a.json")}"
   project     = "oceanic-isotope-233522"
   region      = "${var.region}"
 }
