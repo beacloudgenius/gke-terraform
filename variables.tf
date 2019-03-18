@@ -55,7 +55,7 @@ variable "cluster_auto_repair" {
 variable "cluster_disk_size_gb" {
   type = "string"
   description = "size"
-  default = "15"
+  default = "99"
 }
 
 
@@ -68,7 +68,7 @@ variable "cluster_min_nodes" {
 variable "min_master_version" {
   type = "string"
   description = "version of Kubernetes"
-  default = "1.11.6-gke.6"
+  default = "1.12.5-gke.10"
 }
 
 variable "cluster_max_nodes" {

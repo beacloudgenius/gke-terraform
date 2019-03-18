@@ -10,14 +10,14 @@ resource "google_container_cluster" "cluster" {
 
 ##  remove_default_node_pool = true
 
-  master_authorized_networks_config = {
-      cidr_blocks = [
-        {
-          cidr_block = "73.59.108.163/32",
-          display_name = "Home"
-        }
-      ]
-  }
+  // master_authorized_networks_config = {
+  //     cidr_blocks = [
+  //       {
+  //         cidr_block = "73.59.108.163/32",
+  //         display_name = "Home"
+  //       }
+  //     ]
+  // }
 
   network_policy {
     provider = "CALICO"

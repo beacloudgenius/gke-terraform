@@ -2,9 +2,9 @@
 
 provider "google" {
 
-  version = "~> 1.19.1"
+  version = "~> 2.2.0"
 
-  credentials = "${file("~/.creds/lvnilesh-cloudgeniuslabs-123.json")}"
-  project     = "cloudgeniuslabs-123"
+  credentials = "${file("~/.creds/oceanic-isotope-233522-b030dceb4b1a.json")}"
+  project     = "oceanic-isotope-233522"
   region      = "${var.region}"
 }
