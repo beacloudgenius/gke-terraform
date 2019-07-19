@@ -2,69 +2,68 @@
 
 // GCP Variables
 variable "gcp_cluster_count" {
-  type = "string"
+  type        = string
   description = "Count of cluster instances to start."
-  default = 3
+  default     = 3
 }
 
 // GCP Variables
 variable "region" {
-  type = "string"
+  type        = string
   description = "region."
-  default = "us-west1"
+  default     = "us-west1"
 }
 
 // GCP Variables
 variable "zone" {
-  type = "string"
+  type        = string
   description = "zone."
-  default = "us-west1-a"
+  default     = "us-west1-a"
 }
 
 variable "cluster_name" {
-  type = "string"
+  type        = string
   description = "Cluster name for the GCP Cluster."
-  default = "andromeda"
+  default     = "andromeda"
 }
 
 variable "cluster_machine_type" {
-  type = "string"
+  type        = string
   description = "Machine type"
-  default = "n1-standard-1"
+  default     = "n1-standard-1"
 }
 
 variable "cluster_auto_repair" {
-  type = "string"
+  type        = string
   description = "auto repair"
-  default = "true"
+  default     = "true"
 }
 
 variable "cluster_disk_size_gb" {
-  type = "string"
+  type        = string
   description = "size"
-  default = "99"
+  default     = "99"
 }
 
 variable "cluster_min_nodes" {
-  type = "string"
+  type        = string
   description = "min"
-  default = "1"
+  default     = "1"
 }
 
 variable "min_master_version" {
-  type = "string"
+  type        = string
   description = "version of Kubernetes"
-  default = "1.12.5-gke.10"
 }
 
 variable "cluster_max_nodes" {
-  type = "string"
+  type        = string
   description = "max"
-  default = "11"
+  default     = "11"
 }
 
 variable "cluster_oauth_scopes" {
-  type = "list"
+  type        = list(string)
   description = "oauth scope list"
-  default = [ "https://www.googleapis.com/auth/cloud-platform" ]
+  default     = ["https://www.googleapis.com/auth/cloud-platform"]
 }
