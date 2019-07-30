@@ -30,7 +30,7 @@ variable "cluster_name" {
 variable "cluster_machine_type" {
   type        = string
   description = "Machine type"
-  default     = "n1-standard-1"
+  default     = "n1-standard-2"
 }
 
 variable "cluster_auto_repair" {
