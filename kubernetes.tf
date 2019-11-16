@@ -2,10 +2,10 @@
 
 resource "google_container_cluster" "cluster" {
   name               = var.cluster_name
-  zone               = var.zone
-  network            = "cloudgenius"
-  subnetwork         = "cg"
-  min_master_version = var.min_master_version
+  location           = var.location
+  network            = var.network
+  subnetwork         = var.subnetwork
+
 
   ##  remove_default_node_pool = true
 
@@ -59,9 +59,6 @@ resource "google_container_cluster" "cluster" {
       disabled = false
     }
     horizontal_pod_autoscaling {
-      disabled = false
-    }
-    kubernetes_dashboard {
       disabled = false
     }
     network_policy_config {

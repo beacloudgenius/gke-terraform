@@ -1,29 +1,26 @@
 // General Variables
 
-// GCP Variables
 variable "gcp_cluster_count" {
   type        = string
   description = "Count of cluster instances to start."
   default     = 3
 }
 
-// GCP Variables
 variable "region" {
   type        = string
   description = "region."
   default     = "us-west1"
 }
 
-// GCP Variables
-variable "zone" {
+variable "location" {
   type        = string
-  description = "zone."
+  description = "location."
   default     = "us-west1-a"
 }
 
 variable "cluster_name" {
   type        = string
-  description = "Cluster name for the GCP Cluster."
+  description = "Cluster name for the GKE Cluster."
   default     = "andromeda"
 }
 
@@ -42,7 +39,7 @@ variable "cluster_auto_repair" {
 variable "cluster_disk_size_gb" {
   type        = string
   description = "size"
-  default     = "99"
+  default     = "100"
 }
 
 variable "cluster_min_nodes" {
@@ -51,9 +48,19 @@ variable "cluster_min_nodes" {
   default     = "1"
 }
 
-variable "min_master_version" {
+variable "release_channel" {
   type        = string
-  description = "version of Kubernetes"
+  description = "Kubernetes Release Channel for GKE"
+}
+
+variable "network" {
+  type        = string
+  description = "Name of network"
+}
+
+variable "subnetwork" {
+  type        = string
+  description = "Name of subnetwork"
 }
 
 variable "cluster_max_nodes" {
