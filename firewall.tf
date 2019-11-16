@@ -11,4 +11,6 @@ resource "google_compute_firewall" "default" {
     ports    = ["22"]
   }
 
+  depends_on = [google_compute_network.cloudgenius]
+
 }

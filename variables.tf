@@ -74,3 +74,15 @@ variable "cluster_oauth_scopes" {
   description = "oauth scope list"
   default     = ["https://www.googleapis.com/auth/cloud-platform"]
 }
+
+variable "bucket_name" {
+  description = "The name of the S3 bucket. Must be globally unique."
+  type        = string
+  default     = "cgterraform"
+}
+
+variable "table_name" {
+  description = "The name of the DynamoDB table. Must be unique in this AWS account."
+  type        = string
+  default     = "cgterraform"
+}
