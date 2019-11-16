@@ -29,7 +29,7 @@ resource "google_container_cluster" "cluster" {
   # }
 
   node_pool {
-    name       = "default-pool"
+    name       = "deadpool"
     node_count = var.gcp_cluster_count
     autoscaling {
       min_node_count = var.cluster_min_nodes
@@ -52,6 +52,10 @@ resource "google_container_cluster" "cluster" {
         foo = "bar"
       }
       tags = ["foo", "bar"]
+      shielded_instance_config {
+        enable_integrity_monitoring = true
+        enable_secure_boot = true
+      }
     }
   }
   addons_config {
