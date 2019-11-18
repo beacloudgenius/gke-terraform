@@ -3,7 +3,7 @@
 provider "google" {
   version = "~> 2.20"
 
-  credentials = file("~/btsync/config/.creds/oceanic-isotope-233522-44ccd78389de.json")
+  credentials = file("~/btsync/config/.creds/oceanic-isotope-233522-6f5e8f605379.json")
   project     = "oceanic-isotope-233522"
   region      = var.region
 }
