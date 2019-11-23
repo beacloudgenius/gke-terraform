@@ -2,6 +2,7 @@ provider "aws" {
 
   # Select version of the AWS provider
   version = "~> 2.36"
+  region  = "us-west-2"
 }
 
 
