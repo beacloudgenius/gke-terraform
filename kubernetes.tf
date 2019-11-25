@@ -72,12 +72,12 @@ resource "google_container_cluster" "cluster" {
 
   maintenance_policy {
     daily_maintenance_window {
-      start_time = "03:00"
+      start_time = "09:00"
     }
   }
 
   enable_legacy_abac = false
-  monitoring_service = "monitoring.googleapis.com"
-
+  monitoring_service = "monitoring.googleapis.com/kubernetes"
+  logging_service = "logging.googleapis.com/kubernetes"
   depends_on = [google_compute_subnetwork.cg]
 }
